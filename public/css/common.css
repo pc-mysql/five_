@@ -1,0 +1,91 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(../img/bg.png);
+	background-size: 100%;
+}
+em{
+	font-style: normal;
+}
+#cheeseBoardBox{
+	margin-top: 16%;
+	width: 100vw;
+	height: 100vw;
+	background-color: rgba(200, 200, 177, 1.0);
+	border-radius: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 5px black;
+}
+#cheeseBoard{
+	margin: 0 auto;
+	width: 90vw;
+	height: 90vw;
+	border: 2px solid #000000;
+}
+#header{
+	position: relative;
+}
+#title{
+	margin: 20% 0 0 0;
+	text-align: center;
+}
+#title span{
+	font-size: 2em;
+	font-family: "方正舒体";
+	border: 3px inset rgba(188, 166, 114, 1.0);
+	padding: 10px 8px;
+}
+
+#back{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 5%;
+	background: url(../img/back.png) no-repeat;
+	background-size: 100%;
+}
+#back:hover{
+	opacity: 0.6;
+}
+#player{
+	height: 0;
+	width: 0;
+	position: absolute;
+	right: 10%;
+	top: 12%;
+	padding: 13px;
+	border-radius: 100%;
+	background-color: #000000;
+	border: 1px solid yellow;
+	box-shadow: 0 0 15px yellow;
+}
+#regret,#again{
+	height: 80px;
+	width: 80px;
+	position: absolute;
+}
+#regret{
+	margin-top: 10%;
+	left: 20%;
+}
+#again{
+	margin-top: 10%;
+	right: 20%;
+}
+#regret img,#again img{
+	width: 100%;
+	cursor: pointer;
+}
+#sound{
+	font-size: 2em;
+	position: fixed;
+	right: 10%;
+	bottom: 5%;
+	cursor: pointer;
+	text-shadow: 0 0 8px yellow;
+}
+#sound:hover{
+	opacity: 0.6;
+}

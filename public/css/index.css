@@ -1,0 +1,72 @@
+#bg_img{
+	width: 300px;
+	position: absolute;
+	z-index: 100;
+	left: 50%;
+	margin-left: -130px;
+	margin-top: -180px;
+} 
+#mrgTop{
+	margin-bottom: 280px;
+}
+.start_btn{
+	position: relative;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.start_btn img,.start_btn span{
+	position: absolute;
+	display: none;
+}
+.start_btn span{
+	font-family: "方正舒体";
+	text-shadow: 0 0 2px gray;
+	font-size: 1.6em;
+	cursor: pointer;
+}
+.start_btn img{
+	cursor: pointer;
+	width: 200px;
+	left: 50%;
+	cursor: pointer;
+	margin-left: -100px;
+}
+.start_btn img:hover{
+	opacity: 0.6;
+}
+#win{
+	font-family: "方正舒体";
+	font-size: 3em;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 30%;
+	text-shadow: 0 0 8px gray;
+}
+.btn4{
+	margin-top: 20%;
+}
+#barBox{
+	position: absolute;
+	width: 80%;
+	top: 400px;
+	margin-left: 10%;
+}
+#barNum{
+	color: #444;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+}
+#notice{
+	color: #666;
+	width: auto;
+	margin: 60px auto;
+	font-family: "黑体";
+	text-align: center;
+}
+#notice p{
+	line-height: 1.1;
+}

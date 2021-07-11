@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+		<title>五子棋-玩家对战</title>
+		<link rel="stylesheet" type="text/css" href="../public/css/pvp.css"/>
+		<link rel="shortcut icon" href="../public/img/index.ico"/>		
+		<link rel="stylesheet" type="text/css" href="../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css"/>
+	</head>
+	<body>
+		<audio src="../public/music/musicBg.mp3" autoplay="autoplay" loop>
+			当前浏览器不支持audio
+		</audio>
+		<div id="header">
+			<div id="back"></div>
+			<div id="title"><span>玩家对战</span></div>
+			<span id="player"></span>
+		</div>
+		<div id="cheeseBoardBox">
+			<div id="cheeseBoard">
+				<canvas id="board"></canvas>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="regret"><img src="../public/img/regret.png" ></div>
+			<div id="again"><img src="../public/img/again.png" ></div>
+			<span id="sound"><i class="glyphicon glyphicon-music"></i></span>
+		</div>
+	</body>
+	<script src="../public/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/pvp.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../node_modules/socket.io/client-dist/socket.io.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		let socket = io();
+		let index = 0;
+		$('#board').click(()=>{
+			socket.emit('chat',{x:x,y:y,player:1});
+		})
+		
+		socket.on('send',(msg)=>{
+			index++;
+			drawOne(msg.x,msg.y,msg.player)
+			console.log(msg);
+		})
+	</script>
+</html>
